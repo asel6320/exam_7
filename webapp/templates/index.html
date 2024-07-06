@@ -17,7 +17,7 @@
                     <p class="card-info mt-2">{{ guest.guest_note }}</p>
                       <p class="card-info mt-2">Status: {{ guest.status }}</p>
                       <div class="mt-auto d-flex justify-content-start pt-2">
-                          <a href="#"><i class="bi bi-trash fs-2"></i></a>
+                          <a href="{% url 'delete_note' guest.pk %}"><i class="bi bi-trash fs-2"></i></a>
                           <a href="{% url 'update_note' guest.pk %}"><i class="bi bi-journal-plus fs-2"></i></a>
                       </div>
                   </div>

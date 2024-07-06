@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
@@ -72,3 +73,20 @@ def update_note(request, *args, pk, **kwargs):
                 "update_note.html",
                 {"form": form}
             )
+
+def delete_note(request, *args, pk, **kwargs):
+    guest = get_object_or_404(GuestBook, pk=pk)
+
+    if request.method == 'POST':
+        author_email = request.POST.get('author_email', '')
+
+        if author_email == guest.email:
+            guest.delete()
+            messages.success(request, f'{guest.name} has been successfully deleted.')
+        else:
+            messages.error(request, 'Incorrect email. Deletion aborted.')
+            return render(request, 'delete_note.html', {'guest': guest, 'incorrect_email': True})
+
+        return redirect('main')
+
+    return render(request, 'delete_note.html', {'guest': guest})
