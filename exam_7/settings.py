@@ -81,7 +81,16 @@ WSGI_APPLICATION = 'exam_7.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'guest_book',
+        'USER': 'Administrator',
+        'PASSWORD': 'Sq7kj',
+        'HOST': 'localhost',
+        'PORT': 5432,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
