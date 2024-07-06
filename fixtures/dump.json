@@ -1,0 +1,74 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 1,
+  "fields": {
+    "name": "John Doe",
+    "email": "doe@gmail.com",
+    "guest_note": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "created_at": "2024-07-06T07:31:07.813Z",
+    "changed_at": "2024-07-06T07:36:02.007Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 2,
+  "fields": {
+    "name": "Jane Doe",
+    "email": "jane1234@gmail.com",
+    "guest_note": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "created_at": "2024-07-06T07:31:29.833Z",
+    "changed_at": "2024-07-06T07:31:29.833Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 3,
+  "fields": {
+    "name": "Kenn Michigan",
+    "email": "kenn1234@gmail.com",
+    "guest_note": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "created_at": "2024-07-06T07:31:45.030Z",
+    "changed_at": "2024-07-06T07:31:45.031Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 4,
+  "fields": {
+    "name": "Michael Denn",
+    "email": "michael@gmail.com",
+    "guest_note": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "created_at": "2024-07-06T07:32:01.126Z",
+    "changed_at": "2024-07-06T07:33:34.296Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 5,
+  "fields": {
+    "name": "Mishel Mac",
+    "email": "mishel955@gmail.com",
+    "guest_note": "I was satisfied and had a lot of fun",
+    "created_at": "2024-07-06T07:37:29.204Z",
+    "changed_at": "2024-07-06T07:37:29.204Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 6,
+  "fields": {
+    "name": "Jack Ripper",
+    "email": "ripper544@gmail.com",
+    "guest_note": "I was dissatisfied with the service of those people",
+    "created_at": "2024-07-06T07:38:12.396Z",
+    "changed_at": "2024-07-06T07:38:12.396Z",
+    "status": "blocked"
+  }
+}
+]
