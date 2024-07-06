@@ -10,7 +10,7 @@ from webapp.validate import note_validate
 # Create your views here.
 def index(request):
     form = SearchForm(request.GET)
-    guests = GuestBook.objects.all()
+    guests = GuestBook.objects.all().order_by('-created_at')
 
     if form.is_valid():
         author_name = form.cleaned_data['author_name']
