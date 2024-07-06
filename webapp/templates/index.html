@@ -8,19 +8,22 @@
     <br>
     <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
         {% for guest in guests %}
+            {% if guest.status == 'active' %}
               <div class="col mb-2">
                 <div class="card h-100 bg-body d-flex">
                   <div class="p-2 h-100 d-flex flex-column py-3 px-4">
                     <h4 class="mb-4">{{ guest.name }}</h4>
                     <p>{{ guest.email }}</p>
-                    <p class="card-price mt-2">{{ guest.guest_note }}</p>
+                    <p class="card-info mt-2">{{ guest.guest_note }}</p>
+                      <p class="card-info mt-2">Status: {{ guest.status }}</p>
                       <div class="mt-auto d-flex justify-content-start pt-2">
                           <a href="#"><i class="bi bi-trash fs-2"></i></a>
-                          <a href="#"><i class="bi bi-file-earmark-plus-fill fs-2"></i></a>
+                          <a href="{% url 'update_note' guest.pk %}"><i class="bi bi-journal-plus fs-2"></i></a>
                       </div>
                   </div>
                 </div>
               </div>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
