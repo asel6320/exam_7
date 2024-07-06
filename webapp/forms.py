@@ -18,5 +18,8 @@ class GuestForm(forms.Form):
         widget=widgets.Textarea(attrs={"cols": 20, "rows": 5, "placeholder": "guest note"}),
     )
 
+class SearchForm(forms.Form):
+    author_name = forms.CharField(label='Author Name', max_length=100)
+
 
 

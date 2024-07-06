@@ -4,13 +4,24 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 
 from webapp.models import GuestBook, status_choices
-from webapp.forms import GuestForm
+from webapp.forms import GuestForm, SearchForm
 from webapp.validate import note_validate
 
 # Create your views here.
 def index(request):
+    form = SearchForm(request.GET)
     guests = GuestBook.objects.all()
-    return render(request, 'index.html', context={"guests": guests})
+
+    if form.is_valid():
+        author_name = form.cleaned_data['author_name']
+        guests = guests.filter(name__icontains=author_name, status='active')
+
+    context = {
+        'form': form,
+        'guests': guests,
+    }
+
+    return render(request, 'index.html', context)
 
 def create_note(request):
     if request.method == "GET":
@@ -35,7 +46,8 @@ def create_note(request):
             note = GuestBook.objects.create(
                 name=name,
                 email=email,
-                guest_note=guest_note
+                guest_note=guest_note,
+                status = 'active'
             )
             return redirect("main")
 
