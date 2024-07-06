@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Guest Book</title>
+{% endblock %}
+
+{% block content %}
+    <br>
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+        {% for guest in guests %}
+              <div class="col mb-2">
+                <div class="card h-100 bg-body d-flex">
+                  <div class="p-2 h-100 d-flex flex-column py-3 px-4">
+                    <h4 class="mb-4">{{ guest.name }}</h4>
+                    <p>{{ guest.email }}</p>
+                    <p class="card-price mt-2">{{ guest.guest_note }}</p>
+                      <div class="mt-auto d-flex justify-content-start pt-2">
+                          <a href="#"><i class="bi bi-trash fs-2"></i></a>
+                          <a href="#"><i class="bi bi-file-earmark-plus-fill fs-2"></i></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        {% endfor %}
+    </div>
+{% endblock %}

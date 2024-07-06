@@ -1,9 +1,9 @@
-#from django.urls import path
+from django.urls import path
 
-#from webapp.views import index
+from webapp.views import index, create_note
 
-#urlpatterns = [
-    #path('', index),
-    #path('create/', create_task),
+urlpatterns = [
+    path('', index, name='main'),
+    path('create/', create_note, name='create_note'),
     #path('task/', task_detail),
-#]
+]
